@@ -1,20 +1,24 @@
 .App {
+  margin: 0;
+  padding: 0;
   text-align: center;
 }
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+  height: 30px;
 }
 
 .App-header {
+  position: absolute;
+  z-index: 9999;
+  margin-top: 50px;
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
@@ -29,4 +33,68 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.editor {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+
+  background-color: whitesmoke;
+  min-height: 100vh;
+  width: 100vw;
+
+  overflow: auto;
+}
+
+.editor-info-label {
+  font-size: 10px;
+  margin-bottom: 2px;
+}
+
+.editor-sidebar {
+  position: fixed;
+  bottom: 10%;
+  right: 0;
+  z-index: 9999;
+}
+
+.editor-tab {
+  position: relative;
+  background-color: #282c34;
+  min-height: 30px;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.editor-tab button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: white;
+}
+
+.editor-tab:hover {
+  background-color: yellow;
+}
+
+.editor-tab:hover button {
+  color: black;
+}
+
+.editor-content {
+  min-height: 500px;
+  width: 80%;
+  border: dashed 1px grey;
+}
+
+.editor-spacer:hover {
+  background-color: #f0f0f0;
 }
