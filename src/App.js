@@ -95,14 +95,14 @@ class Editor extends Component {
         <br />
         <Content displayWidth={this.state.width * this.state.zoom}>
           {/* todo: all content should be DnD */}
-          <TitleBlock
-            style={{ padding: "100px 0", backgroundColor: "lightsalmon" }}
-          />
-          <TextBlock />
+          <TitleBlock />
+          <ImageBlock height={500} />
+          <TitleBlock />
           <ImageBlock height={200} />
-          <TitleBlock />
+          <TextBlock />
           <ImageBlock height={300} />
-          <TitleBlock />
+          <TextBlock />
+          <TitleBlock dark />
         </Content>
       </div>
     );
